@@ -1,7 +1,5 @@
 import streamlit as st
 import os
-# Ensure you have the openai library installed: pip install openai
-# Assuming your WorkFlow class is in src/WorkFlow.py
 from src.WorkFlow import workflow # Import the WorkFlow class
 
 # --- Configuration ---
