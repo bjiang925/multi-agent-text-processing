@@ -57,7 +57,7 @@ To get started, you can copy and paste the following sample text inputs into the
   I love the new features in this app! They make my work so much easier.
   ```
 
-- **For Translation (to Spanish):**
+- **For Translation (to Chinese):**
   ```
   Hello, how are you today?
   ```
