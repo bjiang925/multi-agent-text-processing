@@ -80,4 +80,4 @@ Feel free to experiment with your own text inputs to explore the full range of f
 - **Dependency Errors:** Verify that all packages listed in `requirements.txt` are installed. You can check with `pip list`.
 - **Streamlit Not Running:** Make sure you are in the correct directory and that `streamlit_app.py` exists.
 
-For further assistance, refer to the [Streamlit documentation](https://docs.streamlit.io/) or the [OpenAI API documentation](https://platform.openai.com/docs/overview/).
+For further assistance, refer to the [Streamlit documentation](https://docs.streamlit.io/) or the [OpenAI API documentation](https://beta.openai.com/docs/).

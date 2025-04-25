@@ -1,21 +1,20 @@
-from agents.base_agent import BaseAgent
 import openai
 
-class ToneAdjusterAgent(BaseAgent):
-    def __init__(self):
-        super().__init__("ToneAdjusterAgent")
+class ToneAdjusterAgent:
+    def __init__(self, api_key):
+        self.client = openai.OpenAI(api_key=api_key)  # ✅ 用 OpenAI 官方新客户端
 
-    def process(self, text: str, tone: str = "正式") -> str:
+    def run(self, text: str, tone: str = "formal") -> str:
         try:
-            response = openai.ChatCompletion.create(
+            response = self.client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
-                    {"role": "system", "content": "你是一位语言风格专家，擅长调整语气。"},
-                    {"role": "user", "content": f"请将以下文本调整为 {tone} 语气：\n\n{text}"}
+                    {"role": "system", "content": "You are an expert in adjusting writing tone."},
+                    {"role": "user", "content": f"Please adjust the tone of the following text to {tone}:\n\n{text}"}
                 ],
                 temperature=0.7,
                 max_tokens=500
             )
             return response.choices[0].message.content.strip()
         except Exception as e:
-            return f"[ToneAdjusterAgent] 语气调整失败：{str(e)}"
+            return f"[ToneAdjusterAgent] Failed to adjust tone: {str(e)}"
