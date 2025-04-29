@@ -1,5 +1,4 @@
 import openai
-
 class SummarizeAgent:
     """SummarizeAgent: Generate a summary for the input text using OpenAI's chat API."""
 

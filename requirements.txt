@@ -1,6 +1,7 @@
-openai
-streamlit
-PyPDF2
-docx
-pdf2image
-pytesseract
+openai == 1.14.3
+streamlit == 1.34.0
+PyPDF2 == 3.0.1
+pdf2image == 1.17.0
+pytesseract == 0.3.10
+pillow == 10.3.0
+python-docx == 1.1.0
